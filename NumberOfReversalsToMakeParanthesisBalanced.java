@@ -15,11 +15,11 @@ public class NumberOfReversalsToMakeParanthesisBalanced {
             }else stack.push(c);
         }
         int count=0;
-
+        int redlen = stack.size();
         while(!stack.isEmpty() && stack.peek()=='{'){
             stack.pop();
             count++;
         }
-        System.out.println(count);
+        System.out.println(redlen/2+count%2);
     }
 }
